@@ -1,0 +1,36 @@
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+.mybutton{
+  padding: 16px 32px;
+  font-size: 32pt;
+}
+
+input, select, textarea {
+    font-size: 32pt;
+    margin-bottom: 10px !important;
+}
