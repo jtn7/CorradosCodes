@@ -816,7 +816,8 @@ $(document).ready(function(){
 });
 
 function hideMenu(id){
-	$('#menu').toggle();
+	$('#menu').hide();
+	$('#codeEntry').show();
 	if(id=='lookup'){
 		lookUp();
 	}
