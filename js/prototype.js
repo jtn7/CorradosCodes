@@ -810,8 +810,8 @@ $(document).ready(function(){
 		hideMenu(this.id);
 	});
 
-	$('.number').click(function(){
-		putNumber(this.text())
+	$('.mybutton').click(function(){
+		putNumber($('#codeBox').val()+$(this).text());
 	});
 });
 
@@ -825,6 +825,7 @@ function hideMenu(id){
 
 function lookUp(){
 	console.log("I came here to look up a code.");
+
 }
 
 function putNumber(n){
