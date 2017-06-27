@@ -385,7 +385,7 @@ var produce = {
 		"code":93
 	},
 	{
-		"name":"PEPPER JALANO",
+		"name":"PEPPER JALAPENO",
 		"code":49
 	},
 	{
