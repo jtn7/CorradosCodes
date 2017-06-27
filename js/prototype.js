@@ -811,7 +811,24 @@ $(document).ready(function(){
 	});
 
 	$('.mybutton').click(function(){
-		putNumber($('#codeBox').val()+$(this).text());
+		if($(this).text() == '.'){
+			putNumber($('#codeBox').val()+0+0);	
+		}else{
+			putNumber($('#codeBox').val()+$(this).text());
+		}
+		
+	});
+
+	$('.enter').click(function() {
+
+		for(var i=0; i<produce.items.length; i++){
+			if( produce.items[i].code == $('#codeBox').val() ){
+				$('#produceName').text(produce.items[i].name);
+				break;
+			}
+		}
+
+		putNumber(); 
 	});
 });
 
