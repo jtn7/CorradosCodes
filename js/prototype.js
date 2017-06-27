@@ -806,7 +806,7 @@ $(document).ready(function(){
 
 	$('#codeEntry').hide();
 	
-	$('.menuOption').click(function(){
+	$('#lookup').click(function(){
 		hideMenu(this.id);
 	});
 
