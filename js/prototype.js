@@ -820,13 +820,23 @@ $(document).ready(function(){
 	});
 
 	$('.enter').click(function() {
-
+		var t0 = performance.now();
+		var prevName = $('#produceName').text();
 		for(var i=0; i<produce.items.length; i++){
 			if( produce.items[i].code == $('#codeBox').val() ){
 				$('#produceName').text(produce.items[i].name);
 				break;
 			}
 		}
+
+		if( prevName == $('#produceName').text() ){
+			$('#answer').text("Invalid Code");
+		}else{
+			$('#answer').text("");
+		}
+		
+		var t1 = performance.now();
+		console.log("Time: " + (t1-t0));
 
 		putNumber(); 
 	});
