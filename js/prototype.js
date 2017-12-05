@@ -807,24 +807,25 @@ $(document).ready(function(){
 	$('#codeEntry').hide();
 	
 	$('#lookup').click(function(){
-		hideMenu(this.id);
+		hideMenu(this.id); // Hide menu and log state by ID of button
 	});
 
 	$('.mybutton').click(function(){
-		if($(this).text() == '.'){
-			putNumber($('#codeBox').val()+0+0);	
+		if( $(this).text() == '.' ){
+			putNumber( $('#codeBox').val() +0+0 );	
 		}else{
-			putNumber($('#codeBox').val()+$(this).text());
+			putNumber( $('#codeBox').val() + $(this).text() );
 		}
 		
 	});
 
 	$('.enter').click(function() {
-		var t0 = performance.now();
+		var t0 = performance.now(); // Timer for performance
+
 		var prevName = $('#produceName').text();
-		for(var i=0; i<produce.items.length; i++){
+		for( var i=0; i<produce.items.length; i++ ){
 			if( produce.items[i].code == $('#codeBox').val() ){
-				$('#produceName').text(produce.items[i].name);
+				$('#produceName').text( produce.items[i].name );
 				break;
 			}
 		}
@@ -835,13 +836,15 @@ $(document).ready(function(){
 			$('#answer').text("");
 		}
 		
+		// Stop timer and output time taken to find code
 		var t1 = performance.now();
-		console.log("Time: " + (t1-t0));
+		console.log( "Time: " + (t1-t0) );
 
 		putNumber(); 
 	});
 });
 
+// Hide state menu
 function hideMenu(id){
 	$('#menu').hide();
 	$('#codeEntry').show();
@@ -855,6 +858,7 @@ function lookUp(){
 
 }
 
+// Display Number entered in the number box
 function putNumber(n){
 	$('#codeBox').val(n);
 }
