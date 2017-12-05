@@ -810,6 +810,14 @@ $(document).ready(function(){
 		hideMenu(this.id); // Hide menu and log state by ID of button
 	});
 
+	$('#codeBox').keypress(function (e) {
+		var key = e.which;
+		if(key == 13)  // The RETURN key code
+		 {
+		   $('.enter').click();  
+		 }
+	});
+
 	$('.mybutton').click(function(){
 		if( $(this).text() == '.' ){
 			putNumber( $('#codeBox').val() +0+0 );	
